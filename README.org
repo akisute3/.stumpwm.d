@@ -1,0 +1,21 @@
+* シングルディスプレイ
+  ~/.stumpwmrc に以下を記述
+
+  #+begin_src common-lisp
+    ;;; -*- lisp -*-
+    (in-package :stumpwm)
+    (defvar inits-dir "~/.stumpwm.d/inits/")
+    (require 'init "~/.stumpwm.d/inits/init-single.lisp")
+  #+end_src
+
+
+* デュアルディスプレイ
+  ~/.stumpwmrc に以下を記述
+
+  #+begin_src common-lisp
+    ;;; -*- lisp -*-
+    (in-package :stumpwm)
+    (defvar inits-dir "~/.stumpwm.d/inits/")
+    (require 'init "~/.stumpwm.d/inits/init-dual.lisp")
+  #+end_src
+  
