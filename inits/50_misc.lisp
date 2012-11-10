@@ -13,5 +13,10 @@
 ;;; 不要ファイル削除
 (run-shell-command "rm ~/.xsession-errors")
 
+;;; リサイズ
+;;; (iresize.lisp の export を *resize-increment* から
+;;;  set-resize-increment に変更してインストールする必要あり)
+(set-resize-increment 192)
+
 
 (provide 'misc)
