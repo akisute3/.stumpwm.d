@@ -6,6 +6,14 @@
   (run-shell-command "gnome-screensaver-command --lock && xset dpms force standby"))
 (define-key *root-map* (kbd "l") "lock-screen")
 
+;;; シャットダウン
+(defcommand shutdown () ()
+   (run-shell-command "sudo shutdown -h now"))
+
+;;; 再起動
+(defcommand reboot () ()
+   (run-shell-command "sudo shutdown -r now"))
+
 ;;; Firefox
 (defcommand firefox () ()
   "Start Firefox or switch to it, if it is already running."
@@ -31,6 +39,12 @@
   "Start launcher 'dmenu'."
   (run-shell-command "dmenu_run -hist ~/.dmenu.history -b"))
 (define-key *root-map* (kbd ".") "dmenu")
+
+;;; Nautilus+
+(defcommand nautilus () ()
+  "Start Nautilus or switch to it, if it is already running."
+  (run-or-raise "nautilus+" '(:class "Nautilus+")))
+(define-key *root-map* (kbd "+") "nautilus")
 
 
 ;; swap 2 windows
